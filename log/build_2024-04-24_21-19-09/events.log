@@ -1,0 +1,133 @@
+[0.000000] (-) TimerEvent: {}
+[0.002268] (aruco) JobQueued: {'identifier': 'aruco', 'dependencies': OrderedDict()}
+[0.002727] (aruco_msgs) JobQueued: {'identifier': 'aruco_msgs', 'dependencies': OrderedDict()}
+[0.002930] (aruco_ros) JobQueued: {'identifier': 'aruco_ros', 'dependencies': OrderedDict([('aruco', '/home/pi/axior_ws/src/axior_software/install/aruco'), ('aruco_msgs', '/home/pi/axior_ws/src/axior_software/install/aruco_msgs')])}
+[0.003060] (aruco) JobStarted: {'identifier': 'aruco'}
+[0.046012] (aruco_msgs) JobStarted: {'identifier': 'aruco_msgs'}
+[0.064678] (aruco) JobProgress: {'identifier': 'aruco', 'progress': 'cmake'}
+[0.065954] (aruco) Command: {'cmd': ['/usr/bin/cmake', '/home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco', '-DCMAKE_INSTALL_PREFIX=/home/pi/axior_ws/src/axior_software/install/aruco'], 'cwd': '/home/pi/axior_ws/src/axior_software/build/aruco', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '172.20.10.12 12685 22'), ('LC_TIME', 'ru_RU.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass.sh'), ('SHLVL', '3'), ('BROWSER', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi/axior_ws/src/axior_software/packages'), ('TERM_PROGRAM_VERSION', '1.88.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-2e40d651-86fd-4bf1-a9c6-e0798349a5d2.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ru_RU.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '6'), ('PATH', '/home/pi/.cache/cloud-code/m2c/bin:/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ru_RU.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ru_RU.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-42ba5375f9.sock'), ('TERM_PROGRAM', 'vscode'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ru_RU.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ru_RU.UTF-8'), ('LC_IDENTIFICATION', 'ru_RU.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/pi/axior_ws/src/axior_software/build/aruco'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '172.20.10.12 12685 172.20.10.11 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'ru_RU.UTF-8'), ('LC_PAPER', 'ru_RU.UTF-8'), ('COLCON', '1')]), 'shell': False}
+[0.093259] (aruco_msgs) JobProgress: {'identifier': 'aruco_msgs', 'progress': 'cmake'}
+[0.097610] (aruco_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco_msgs', '-DCMAKE_INSTALL_PREFIX=/home/pi/axior_ws/src/axior_software/install/aruco_msgs'], 'cwd': '/home/pi/axior_ws/src/axior_software/build/aruco_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '172.20.10.12 12685 22'), ('LC_TIME', 'ru_RU.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass.sh'), ('SHLVL', '3'), ('BROWSER', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi/axior_ws/src/axior_software/packages'), ('TERM_PROGRAM_VERSION', '1.88.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-2e40d651-86fd-4bf1-a9c6-e0798349a5d2.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ru_RU.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '6'), ('PATH', '/home/pi/.cache/cloud-code/m2c/bin:/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ru_RU.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ru_RU.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-42ba5375f9.sock'), ('TERM_PROGRAM', 'vscode'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ru_RU.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ru_RU.UTF-8'), ('LC_IDENTIFICATION', 'ru_RU.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/pi/axior_ws/src/axior_software/build/aruco_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '172.20.10.12 12685 172.20.10.11 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'ru_RU.UTF-8'), ('LC_PAPER', 'ru_RU.UTF-8'), ('COLCON', '1')]), 'shell': False}
+[0.117582] (-) TimerEvent: {}
+[0.219179] (-) TimerEvent: {}
+[0.320328] (-) TimerEvent: {}
+[0.421124] (-) TimerEvent: {}
+[0.522016] (-) TimerEvent: {}
+[0.622936] (-) TimerEvent: {}
+[0.724040] (-) TimerEvent: {}
+[0.815727] (aruco) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.824334] (-) TimerEvent: {}
+[0.835878] (aruco_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.928713] (-) TimerEvent: {}
+[1.030037] (-) TimerEvent: {}
+[1.131079] (-) TimerEvent: {}
+[1.232547] (-) TimerEvent: {}
+[1.336510] (-) TimerEvent: {}
+[1.440566] (-) TimerEvent: {}
+[1.527723] (aruco_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.533136] (aruco) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.540767] (-) TimerEvent: {}
+[1.582838] (aruco) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.584549] (aruco_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.641034] (-) TimerEvent: {}
+[1.742246] (-) TimerEvent: {}
+[1.843734] (-) TimerEvent: {}
+[1.945192] (-) TimerEvent: {}
+[2.048612] (-) TimerEvent: {}
+[2.114103] (aruco) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.137664] (aruco_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.144127] (aruco) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.148601] (aruco) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.149579] (-) TimerEvent: {}
+[2.154656] (aruco) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.174615] (aruco_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.175731] (aruco_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.178012] (aruco_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.185456] (aruco) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.196656] (aruco_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.249958] (-) TimerEvent: {}
+[2.351636] (-) TimerEvent: {}
+[2.457333] (-) TimerEvent: {}
+[2.558980] (-) TimerEvent: {}
+[2.660525] (-) TimerEvent: {}
+[2.764511] (-) TimerEvent: {}
+[2.866041] (-) TimerEvent: {}
+[2.871174] (aruco) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.875209] (aruco_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.907292] (aruco) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.908566] (aruco) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.910794] (aruco) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.911802] (aruco_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.916805] (aruco_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.919424] (aruco_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.966271] (-) TimerEvent: {}
+[3.067327] (-) TimerEvent: {}
+[3.090730] (aruco_msgs) StderrLine: {'line': b'\x1b[33mCMake Warning at CMakeLists.txt:9 (find_package):\n'}
+[3.092251] (aruco_msgs) StderrLine: {'line': b'  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project\n'}
+[3.093136] (aruco_msgs) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[3.093745] (aruco_msgs) StderrLine: {'line': b'  "ament_cmake", but CMake did not find one.\n'}
+[3.094708] (aruco_msgs) StderrLine: {'line': b'\n'}
+[3.095418] (aruco_msgs) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_cmake" with\n'}
+[3.095921] (aruco_msgs) StderrLine: {'line': b'  any of the following names:\n'}
+[3.108370] (aruco_msgs) StderrLine: {'line': b'\n'}
+[3.109117] (aruco_msgs) StderrLine: {'line': b'    ament_cmakeConfig.cmake\n'}
+[3.109597] (aruco_msgs) StderrLine: {'line': b'    ament_cmake-config.cmake\n'}
+[3.109933] (aruco_msgs) StderrLine: {'line': b'\n'}
+[3.110192] (aruco_msgs) StderrLine: {'line': b'  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set\n'}
+[3.110449] (aruco_msgs) StderrLine: {'line': b'  "ament_cmake_DIR" to a directory containing one of the above files.  If\n'}
+[3.110730] (aruco_msgs) StderrLine: {'line': b'  "ament_cmake" provides a separate development package or SDK, be sure it\n'}
+[3.111051] (aruco_msgs) StderrLine: {'line': b'  has been installed.\n'}
+[3.111424] (aruco_msgs) StderrLine: {'line': b'\n'}
+[3.111830] (aruco) StderrLine: {'line': b'\x1b[33mCMake Warning at CMakeLists.txt:11 (find_package):\n'}
+[3.112439] (aruco) StderrLine: {'line': b'  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project\n'}
+[3.112972] (aruco) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[3.113474] (aruco) StderrLine: {'line': b'  "ament_cmake", but CMake did not find one.\n'}
+[3.114016] (aruco) StderrLine: {'line': b'\n'}
+[3.114462] (aruco) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_cmake" with\n'}
+[3.114927] (aruco) StderrLine: {'line': b'  any of the following names:\n'}
+[3.115460] (aruco) StderrLine: {'line': b'\n'}
+[3.128490] (aruco) StderrLine: {'line': b'    ament_cmakeConfig.cmake\n'}
+[3.129134] (aruco) StderrLine: {'line': b'    ament_cmake-config.cmake\n'}
+[3.129528] (aruco) StderrLine: {'line': b'\n'}
+[3.129844] (aruco) StderrLine: {'line': b'  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set\n'}
+[3.130148] (aruco) StderrLine: {'line': b'  "ament_cmake_DIR" to a directory containing one of the above files.  If\n'}
+[3.130499] (aruco) StderrLine: {'line': b'  "ament_cmake" provides a separate development package or SDK, be sure it\n'}
+[3.130818] (aruco) StderrLine: {'line': b'  has been installed.\n'}
+[3.131117] (aruco) StderrLine: {'line': b'\n'}
+[3.131403] (aruco) StderrLine: {'line': b'\x1b[0m\n'}
+[3.131762] (aruco_msgs) StderrLine: {'line': b'\x1b[0m\n'}
+[3.179781] (-) TimerEvent: {}
+[3.247138] (aruco_msgs) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:10 (find_package):\n'}
+[3.248053] (aruco_msgs) StderrLine: {'line': b'  By not providing "Findstd_msgs.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[3.248630] (aruco_msgs) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "std_msgs",\n'}
+[3.249135] (aruco_msgs) StderrLine: {'line': b'  but CMake did not find one.\n'}
+[3.249687] (aruco_msgs) StderrLine: {'line': b'\n'}
+[3.250304] (aruco_msgs) StderrLine: {'line': b'  Could not find a package configuration file provided by "std_msgs" with any\n'}
+[3.256575] (aruco_msgs) StderrLine: {'line': b'  of the following names:\n'}
+[3.257619] (aruco_msgs) StderrLine: {'line': b'\n'}
+[3.258623] (aruco_msgs) StderrLine: {'line': b'    std_msgsConfig.cmake\n'}
+[3.259115] (aruco_msgs) StderrLine: {'line': b'    std_msgs-config.cmake\n'}
+[3.259576] (aruco_msgs) StderrLine: {'line': b'\n'}
+[3.260092] (aruco_msgs) StderrLine: {'line': b'  Add the installation prefix of "std_msgs" to CMAKE_PREFIX_PATH or set\n'}
+[3.262497] (aruco_msgs) StderrLine: {'line': b'  "std_msgs_DIR" to a directory containing one of the above files.  If\n'}
+[3.263189] (aruco_msgs) StderrLine: {'line': b'  "std_msgs" provides a separate development package or SDK, be sure it has\n'}
+[3.263939] (aruco_msgs) StderrLine: {'line': b'  been installed.\n'}
+[3.264425] (aruco_msgs) StderrLine: {'line': b'\n'}
+[3.277142] (aruco_msgs) StderrLine: {'line': b'\x1b[0m\n'}
+[3.277933] (aruco_msgs) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[3.278776] (aruco_msgs) StdoutLine: {'line': b'See also "/home/pi/axior_ws/src/axior_software/build/aruco_msgs/CMakeFiles/CMakeOutput.log".\n'}
+[3.279708] (aruco_msgs) CommandEnded: {'returncode': 1}
+[3.281787] (-) TimerEvent: {}
+[3.311326] (aruco) StdoutLine: {'line': b'-- Found OpenCV: /usr (found suitable version "4.5.4", minimum required is "4.2.0") \n'}
+[3.320923] (aruco) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[3.322026] (aruco) StdoutLine: {'line': b'See also "/home/pi/axior_ws/src/axior_software/build/aruco/CMakeFiles/CMakeOutput.log".\n'}
+[3.323302] (aruco) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:68 (ament_export_include_directories):\n'}
+[3.332764] (aruco) StderrLine: {'line': b'  Unknown CMake command "ament_export_include_directories".\n'}
+[3.333498] (aruco) StderrLine: {'line': b'\n'}
+[3.334123] (aruco) StderrLine: {'line': b'\x1b[0m\n'}
+[3.382072] (-) TimerEvent: {}
+[3.479423] (aruco_msgs) JobEnded: {'identifier': 'aruco_msgs', 'rc': 1}
+[3.486648] (-) TimerEvent: {}
+[3.490862] (aruco) JobEnded: {'identifier': 'aruco', 'rc': 'SIGINT'}
+[3.499349] (aruco_ros) JobSkipped: {'identifier': 'aruco_ros'}
+[3.499675] (-) EventReactorShutdown: {}

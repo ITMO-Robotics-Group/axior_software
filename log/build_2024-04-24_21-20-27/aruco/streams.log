@@ -1,0 +1,30 @@
+[0.271s] Invoking command in '/home/pi/axior_ws/src/axior_software/build/aruco': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco -DCMAKE_INSTALL_PREFIX=/home/pi/axior_ws/src/axior_software/install/aruco
+[0.359s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[4.497s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[8.822s] -- Configuring done
+[8.933s] -- Generating done
+[9.422s] -- Build files have been written to: /home/pi/axior_ws/src/axior_software/build/aruco
+[9.442s] Invoked command in '/home/pi/axior_ws/src/axior_software/build/aruco' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco -DCMAKE_INSTALL_PREFIX=/home/pi/axior_ws/src/axior_software/install/aruco
+[9.453s] Invoking command in '/home/pi/axior_ws/src/axior_software/build/aruco': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/pi/axior_ws/src/axior_software/build/aruco -- -j4 -l4
+[9.730s] [  5%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/cvdrawingutils.cpp.o[0m
+[21.093s] [ 11%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/dictionary_based.cpp.o[0m
+[28.543s] [ 16%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/dictionary.cpp.o[0m
+[39.719s] [ 22%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/fractaldetector.cpp.o[0m
+[53.536s] [ 27%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/ippe.cpp.o[0m
+[65.208s] [ 33%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/marker.cpp.o[0m
+[75.318s] [ 38%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/markerdetector_impl.cpp.o[0m
+[93.405s] [ 44%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/markerdetector.cpp.o[0m
+[103.450s] [ 50%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/markerlabeler.cpp.o[0m
+[110.371s] [ 55%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/markermap.cpp.o[0m
+[121.396s] [ 61%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/posetracker.cpp.o[0m
+[157.652s] [ 66%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/fractallabelers/fractallabeler.cpp.o[0m
+[166.560s] [ 72%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/fractallabelers/fractalmarker.cpp.o[0m
+[174.139s] [ 77%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/fractallabelers/fractalmarkerset.cpp.o[0m
+[184.903s] [ 83%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/fractallabelers/fractalposetracker.cpp.o[0m
+[209.211s] [ 88%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/debug.cpp.o[0m
+[212.109s] [ 94%] [32mBuilding CXX object CMakeFiles/aruco.dir/src/aruco/cameraparameters.cpp.o[0m
+[220.305s] [100%] [32m[1mLinking CXX shared library libaruco.so[0m
+[221.279s] gmake[2]: *** Deleting file 'libaruco.so'
+[221.280s] gmake[2]: *** [CMakeFiles/aruco.dir/build.make:407: libaruco.so] Interrupt
+[221.281s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/aruco.dir/all] Interrupt
+[221.281s] gmake: *** [Makefile:146: all] Interrupt

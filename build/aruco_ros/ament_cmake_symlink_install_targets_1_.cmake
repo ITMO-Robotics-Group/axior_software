@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/pi/axior_ws/src/axior_software/build/aruco_ros/marker_publisher" "/home/pi/axior_ws/src/axior_software/build/aruco_ros/single" "/home/pi/axior_ws/src/axior_software/build/aruco_ros/double" "TARGETS" "marker_publisher" "single" "double" "DESTINATION" "lib/aruco_ros")

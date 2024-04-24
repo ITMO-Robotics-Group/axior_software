@@ -1,0 +1,1 @@
+/home/pi/axior_ws/src/axior_software/build/aruco_msgs/ament_cmake_python/aruco_msgs/aruco_msgs.egg-info/SOURCES.txt

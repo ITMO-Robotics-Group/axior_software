@@ -1,0 +1,175 @@
+[0.000000] (-) TimerEvent: {}
+[0.002844] (aruco) JobQueued: {'identifier': 'aruco', 'dependencies': OrderedDict()}
+[0.003426] (aruco_msgs) JobQueued: {'identifier': 'aruco_msgs', 'dependencies': OrderedDict()}
+[0.003712] (aruco_ros) JobQueued: {'identifier': 'aruco_ros', 'dependencies': OrderedDict([('aruco', '/home/pi/axior_ws/src/axior_software/install/aruco'), ('aruco_msgs', '/home/pi/axior_ws/src/axior_software/install/aruco_msgs')])}
+[0.004063] (aruco) JobStarted: {'identifier': 'aruco'}
+[0.031988] (aruco_msgs) JobStarted: {'identifier': 'aruco_msgs'}
+[0.054026] (aruco) JobProgress: {'identifier': 'aruco', 'progress': 'cmake'}
+[0.057244] (aruco) JobProgress: {'identifier': 'aruco', 'progress': 'build'}
+[0.060336] (aruco) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pi/axior_ws/src/axior_software/build/aruco', '--', '-j4', '-l4'], 'cwd': '/home/pi/axior_ws/src/axior_software/build/aruco', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '172.20.10.12 12685 22'), ('LC_TIME', 'ru_RU.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass.sh'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi/axior_ws/src/axior_software/packages'), ('TERM_PROGRAM_VERSION', '1.88.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-2e40d651-86fd-4bf1-a9c6-e0798349a5d2.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ru_RU.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '6'), ('PATH', '/opt/ros/humble/bin:/home/pi/.cache/cloud-code/m2c/bin:/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ru_RU.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ru_RU.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-42ba5375f9.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ru_RU.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ru_RU.UTF-8'), ('LC_IDENTIFICATION', 'ru_RU.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/pi/axior_ws/src/axior_software/build/aruco'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '172.20.10.12 12685 172.20.10.11 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ru_RU.UTF-8'), ('LC_PAPER', 'ru_RU.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.145115] (-) TimerEvent: {}
+[0.153134] (aruco_msgs) JobProgress: {'identifier': 'aruco_msgs', 'progress': 'cmake'}
+[0.160695] (aruco_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco_msgs', '-DCMAKE_INSTALL_PREFIX=/home/pi/axior_ws/src/axior_software/install/aruco_msgs'], 'cwd': '/home/pi/axior_ws/src/axior_software/build/aruco_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '172.20.10.12 12685 22'), ('LC_TIME', 'ru_RU.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass.sh'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi/axior_ws/src/axior_software/packages'), ('TERM_PROGRAM_VERSION', '1.88.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-2e40d651-86fd-4bf1-a9c6-e0798349a5d2.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ru_RU.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '6'), ('PATH', '/opt/ros/humble/bin:/home/pi/.cache/cloud-code/m2c/bin:/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ru_RU.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ru_RU.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-42ba5375f9.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ru_RU.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ru_RU.UTF-8'), ('LC_IDENTIFICATION', 'ru_RU.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/pi/axior_ws/src/axior_software/build/aruco_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '172.20.10.12 12685 172.20.10.11 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ru_RU.UTF-8'), ('LC_PAPER', 'ru_RU.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.225877] (aruco_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.245716] (-) TimerEvent: {}
+[0.346697] (-) TimerEvent: {}
+[0.430362] (aruco) StdoutLine: {'line': b'[100%] Built target aruco\n'}
+[0.446896] (-) TimerEvent: {}
+[0.472372] (aruco) CommandEnded: {'returncode': 0}
+[0.547074] (-) TimerEvent: {}
+[0.648868] (-) TimerEvent: {}
+[0.749867] (-) TimerEvent: {}
+[0.839016] (aruco) JobProgress: {'identifier': 'aruco', 'progress': 'install'}
+[0.850584] (-) TimerEvent: {}
+[0.860097] (aruco_msgs) StdoutLine: {'line': b'-- Found std_msgs: 4.2.3 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[0.874679] (aruco) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/pi/axior_ws/src/axior_software/build/aruco'], 'cwd': '/home/pi/axior_ws/src/axior_software/build/aruco', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '172.20.10.12 12685 22'), ('LC_TIME', 'ru_RU.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass.sh'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi/axior_ws/src/axior_software/packages'), ('TERM_PROGRAM_VERSION', '1.88.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-2e40d651-86fd-4bf1-a9c6-e0798349a5d2.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ru_RU.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '6'), ('PATH', '/opt/ros/humble/bin:/home/pi/.cache/cloud-code/m2c/bin:/home/pi/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ru_RU.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ru_RU.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-42ba5375f9.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ru_RU.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ru_RU.UTF-8'), ('LC_IDENTIFICATION', 'ru_RU.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/pi/axior_ws/src/axior_software/build/aruco'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '172.20.10.12 12685 172.20.10.11 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ru_RU.UTF-8'), ('LC_PAPER', 'ru_RU.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.914311] (aruco) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.918090] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/lib/libaruco.so\n'}
+[0.950286] (-) TimerEvent: {}
+[0.953721] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include\n'}
+[0.956075] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco\n'}
+[0.959521] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/markerdetector.h\n'}
+[0.961271] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/fractaldetector.h\n'}
+[0.963122] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/picoflann.h\n'}
+[0.964946] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/markerdetector_impl.h\n'}
+[0.967043] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/timers.h\n'}
+[0.968824] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/aruco.h\n'}
+[0.970697] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/cameraparameters.h\n'}
+[0.975552] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/dictionary_based.h\n'}
+[0.977568] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/cvdrawingutils.h\n'}
+[0.979697] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/levmarq.h\n'}
+[0.981749] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/dictionary.h\n'}
+[0.983598] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/fractallabelers\n'}
+[0.985267] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/fractallabelers/fractalmarkerset.h\n'}
+[0.985801] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/fractallabelers/fractallabeler.h\n'}
+[0.986220] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/fractallabelers/fractalposetracker.h\n'}
+[0.986536] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/fractallabelers/fractalmarker.h\n'}
+[0.986821] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/aruco_cvversioning.h\n'}
+[0.987109] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/debug.h\n'}
+[0.987390] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/posetracker.h\n'}
+[0.987671] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/marker.h\n'}
+[0.987964] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/aruco_export.h\n'}
+[0.988286] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/markerlabeler.h\n'}
+[0.988570] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/markermap.h\n'}
+[0.988850] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/ippe.h\n'}
+[0.989133] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/environment/library_path.sh\n'}
+[0.989417] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/environment/library_path.dsv\n'}
+[0.990730] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/ament_index/resource_index/package_run_dependencies/aruco\n'}
+[0.993456] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/ament_index/resource_index/parent_prefix_path/aruco\n'}
+[0.995752] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/environment/ament_prefix_path.sh\n'}
+[0.997771] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/environment/ament_prefix_path.dsv\n'}
+[0.999549] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/environment/path.sh\n'}
+[1.001485] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/environment/path.dsv\n'}
+[1.003670] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/local_setup.bash\n'}
+[1.005649] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/local_setup.sh\n'}
+[1.007537] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/local_setup.zsh\n'}
+[1.010712] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/local_setup.dsv\n'}
+[1.012465] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/package.dsv\n'}
+[1.014523] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/ament_index/resource_index/packages/aruco\n'}
+[1.016884] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.020005] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.023377] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/cmake/arucoConfig.cmake\n'}
+[1.023860] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/cmake/arucoConfig-version.cmake\n'}
+[1.024235] (aruco) StdoutLine: {'line': b'-- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/package.xml\n'}
+[1.024583] (aruco) CommandEnded: {'returncode': 0}
+[1.050151] (aruco_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.053176] (-) TimerEvent: {}
+[1.064657] (aruco_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.165407] (aruco_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.166937] (-) TimerEvent: {}
+[1.188893] (aruco_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.267231] (-) TimerEvent: {}
+[1.272225] (aruco_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.367497] (-) TimerEvent: {}
+[1.469737] (-) TimerEvent: {}
+[1.530628] (aruco_msgs) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.570376] (-) TimerEvent: {}
+[1.667605] (aruco) JobEnded: {'identifier': 'aruco', 'rc': 0}
+[1.670526] (-) TimerEvent: {}
+[1.713222] (aruco_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.770773] (-) TimerEvent: {}
+[1.871752] (-) TimerEvent: {}
+[1.972691] (-) TimerEvent: {}
+[2.073664] (-) TimerEvent: {}
+[2.174512] (-) TimerEvent: {}
+[2.275473] (-) TimerEvent: {}
+[2.377216] (-) TimerEvent: {}
+[2.479073] (-) TimerEvent: {}
+[2.580365] (-) TimerEvent: {}
+[2.681421] (-) TimerEvent: {}
+[2.782309] (-) TimerEvent: {}
+[2.883104] (-) TimerEvent: {}
+[2.984050] (-) TimerEvent: {}
+[3.085318] (-) TimerEvent: {}
+[3.186594] (-) TimerEvent: {}
+[3.287851] (-) TimerEvent: {}
+[3.374086] (aruco_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[3.388048] (-) TimerEvent: {}
+[3.488819] (-) TimerEvent: {}
+[3.589629] (-) TimerEvent: {}
+[3.690536] (-) TimerEvent: {}
+[3.791826] (-) TimerEvent: {}
+[3.892694] (-) TimerEvent: {}
+[3.993496] (-) TimerEvent: {}
+[4.094563] (-) TimerEvent: {}
+[4.196031] (-) TimerEvent: {}
+[4.297104] (-) TimerEvent: {}
+[4.886119] (-) TimerEvent: {}
+[4.986894] (-) TimerEvent: {}
+[5.087792] (-) TimerEvent: {}
+[5.188545] (-) TimerEvent: {}
+[5.289208] (-) TimerEvent: {}
+[5.390243] (-) TimerEvent: {}
+[5.491004] (-) TimerEvent: {}
+[5.591768] (-) TimerEvent: {}
+[5.692567] (-) TimerEvent: {}
+[5.793379] (-) TimerEvent: {}
+[5.837338] (aruco_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.893521] (-) TimerEvent: {}
+[5.994283] (-) TimerEvent: {}
+[6.095497] (-) TimerEvent: {}
+[6.196657] (-) TimerEvent: {}
+[6.297688] (-) TimerEvent: {}
+[6.398430] (-) TimerEvent: {}
+[6.499375] (-) TimerEvent: {}
+[6.600804] (-) TimerEvent: {}
+[6.614313] (aruco_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[6.700960] (-) TimerEvent: {}
+[6.790824] (aruco_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[6.799786] (aruco_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[6.801090] (-) TimerEvent: {}
+[6.902142] (-) TimerEvent: {}
+[6.932333] (aruco_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[6.933247] (aruco_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[6.933909] (aruco_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[6.934404] (aruco_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[7.002276] (-) TimerEvent: {}
+[7.033353] (aruco_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[7.102467] (-) TimerEvent: {}
+[7.203231] (-) TimerEvent: {}
+[7.304030] (-) TimerEvent: {}
+[7.404817] (-) TimerEvent: {}
+[7.433764] (aruco_msgs) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:21 (find_package):\n'}
+[7.434783] (aruco_msgs) StderrLine: {'line': b'  By not providing "Findament_lint_auto.cmake" in CMAKE_MODULE_PATH this\n'}
+[7.435343] (aruco_msgs) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[7.435786] (aruco_msgs) StderrLine: {'line': b'  "ament_lint_auto", but CMake did not find one.\n'}
+[7.436207] (aruco_msgs) StderrLine: {'line': b'\n'}
+[7.436751] (aruco_msgs) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_lint_auto"\n'}
+[7.437934] (aruco_msgs) StderrLine: {'line': b'  with any of the following names:\n'}
+[7.439159] (aruco_msgs) StderrLine: {'line': b'\n'}
+[7.440466] (aruco_msgs) StderrLine: {'line': b'    ament_lint_autoConfig.cmake\n'}
+[7.441391] (aruco_msgs) StderrLine: {'line': b'    ament_lint_auto-config.cmake\n'}
+[7.443203] (aruco_msgs) StderrLine: {'line': b'\n'}
+[7.444010] (aruco_msgs) StderrLine: {'line': b'  Add the installation prefix of "ament_lint_auto" to CMAKE_PREFIX_PATH or\n'}
+[7.445308] (aruco_msgs) StderrLine: {'line': b'  set "ament_lint_auto_DIR" to a directory containing one of the above files.\n'}
+[7.446834] (aruco_msgs) StderrLine: {'line': b'  If "ament_lint_auto" provides a separate development package or SDK, be\n'}
+[7.448384] (aruco_msgs) StderrLine: {'line': b'  sure it has been installed.\n'}
+[7.450101] (aruco_msgs) StderrLine: {'line': b'\n'}
+[7.451807] (aruco_msgs) StderrLine: {'line': b'\x1b[0m\n'}
+[7.453045] (aruco_msgs) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[7.453965] (aruco_msgs) StdoutLine: {'line': b'See also "/home/pi/axior_ws/src/axior_software/build/aruco_msgs/CMakeFiles/CMakeOutput.log".\n'}
+[7.469461] (aruco_msgs) CommandEnded: {'returncode': 1}
+[7.505075] (-) TimerEvent: {}
+[7.537422] (aruco_msgs) JobEnded: {'identifier': 'aruco_msgs', 'rc': 1}
+[7.550425] (aruco_ros) JobSkipped: {'identifier': 'aruco_ros'}
+[7.550687] (-) EventReactorShutdown: {}

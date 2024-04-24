@@ -1,0 +1,1 @@
+/home/pi/axior_ws/src/axior_software/build/aruco_msgs/ament_cmake_core/aruco_msgsConfig-version.cmake

@@ -1,0 +1,220 @@
+[0.773s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.774s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffa6a69120>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffa6badd20>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffa6badd20>>)
+[2.071s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.072s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.073s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.073s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.074s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.075s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.075s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/pi/axior_ws/src/axior_software'
+[2.076s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.077s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.078s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.078s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.079s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.080s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.080s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.080s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.081s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.161s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.161s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.162s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.163s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.163s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.164s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.165s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.166s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.166s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['ignore', 'ignore_ament_install']
+[2.167s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ignore'
+[2.168s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ignore_ament_install'
+[2.168s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['colcon_pkg']
+[2.169s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'colcon_pkg'
+[2.169s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['colcon_meta']
+[2.169s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'colcon_meta'
+[2.170s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['ros']
+[2.170s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ros'
+[2.171s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['cmake', 'python']
+[2.171s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'cmake'
+[2.172s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'python'
+[2.173s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['python_setup_py']
+[2.173s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'python_setup_py'
+[2.174s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.175s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.176s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.177s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.178s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.178s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.179s] Level 1:colcon.colcon_core.package_identification:_identify(packages) by extensions ['ignore', 'ignore_ament_install']
+[2.180s] Level 1:colcon.colcon_core.package_identification:_identify(packages) by extension 'ignore'
+[2.181s] Level 1:colcon.colcon_core.package_identification:_identify(packages) by extension 'ignore_ament_install'
+[2.181s] Level 1:colcon.colcon_core.package_identification:_identify(packages) by extensions ['colcon_pkg']
+[2.182s] Level 1:colcon.colcon_core.package_identification:_identify(packages) by extension 'colcon_pkg'
+[2.182s] Level 1:colcon.colcon_core.package_identification:_identify(packages) by extensions ['colcon_meta']
+[2.183s] Level 1:colcon.colcon_core.package_identification:_identify(packages) by extension 'colcon_meta'
+[2.183s] Level 1:colcon.colcon_core.package_identification:_identify(packages) by extensions ['ros']
+[2.184s] Level 1:colcon.colcon_core.package_identification:_identify(packages) by extension 'ros'
+[2.185s] Level 1:colcon.colcon_core.package_identification:_identify(packages) by extensions ['cmake', 'python']
+[2.185s] Level 1:colcon.colcon_core.package_identification:_identify(packages) by extension 'cmake'
+[2.186s] Level 1:colcon.colcon_core.package_identification:_identify(packages) by extension 'python'
+[2.186s] Level 1:colcon.colcon_core.package_identification:_identify(packages) by extensions ['python_setup_py']
+[2.187s] Level 1:colcon.colcon_core.package_identification:_identify(packages) by extension 'python_setup_py'
+[2.188s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization) by extensions ['ignore', 'ignore_ament_install']
+[2.188s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization) by extension 'ignore'
+[2.189s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization) by extension 'ignore_ament_install'
+[2.189s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization) by extensions ['colcon_pkg']
+[2.190s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization) by extension 'colcon_pkg'
+[2.190s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization) by extensions ['colcon_meta']
+[2.191s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization) by extension 'colcon_meta'
+[2.191s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization) by extensions ['ros']
+[2.192s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization) by extension 'ros'
+[2.192s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization) by extensions ['cmake', 'python']
+[2.193s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization) by extension 'cmake'
+[2.194s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization) by extension 'python'
+[2.194s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization) by extensions ['python_setup_py']
+[2.195s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization) by extension 'python_setup_py'
+[2.196s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco) by extensions ['ignore', 'ignore_ament_install']
+[2.197s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco) by extension 'ignore'
+[2.197s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco) by extension 'ignore_ament_install'
+[2.198s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco) by extensions ['colcon_pkg']
+[2.198s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco) by extension 'colcon_pkg'
+[2.199s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco) by extensions ['colcon_meta']
+[2.199s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco) by extension 'colcon_meta'
+[2.200s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco) by extensions ['ros']
+[2.200s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco) by extension 'ros'
+[2.214s] DEBUG:colcon.colcon_core.package_identification:Package 'packages/aruco_localization/aruco' with type 'ros.ament_cmake' and name 'aruco'
+[2.215s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_msgs) by extensions ['ignore', 'ignore_ament_install']
+[2.215s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_msgs) by extension 'ignore'
+[2.216s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_msgs) by extension 'ignore_ament_install'
+[2.217s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_msgs) by extensions ['colcon_pkg']
+[2.217s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_msgs) by extension 'colcon_pkg'
+[2.217s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_msgs) by extensions ['colcon_meta']
+[2.218s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_msgs) by extension 'colcon_meta'
+[2.219s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_msgs) by extensions ['ros']
+[2.219s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_msgs) by extension 'ros'
+[2.231s] DEBUG:colcon.colcon_core.package_identification:Package 'packages/aruco_localization/aruco_msgs' with type 'ros.ament_cmake' and name 'aruco_msgs'
+[2.232s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_ros) by extensions ['ignore', 'ignore_ament_install']
+[2.233s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_ros) by extension 'ignore'
+[2.234s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_ros) by extension 'ignore_ament_install'
+[2.234s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_ros) by extensions ['colcon_pkg']
+[2.235s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_ros) by extension 'colcon_pkg'
+[2.235s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_ros) by extensions ['colcon_meta']
+[2.236s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_ros) by extension 'colcon_meta'
+[2.236s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_ros) by extensions ['ros']
+[2.237s] Level 1:colcon.colcon_core.package_identification:_identify(packages/aruco_localization/aruco_ros) by extension 'ros'
+[2.244s] DEBUG:colcon.colcon_core.package_identification:Package 'packages/aruco_localization/aruco_ros' with type 'ros.ament_cmake' and name 'aruco_ros'
+[2.245s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['ignore', 'ignore_ament_install']
+[2.246s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ignore'
+[2.246s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ignore_ament_install'
+[2.247s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['colcon_pkg']
+[2.248s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'colcon_pkg'
+[2.248s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['colcon_meta']
+[2.249s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'colcon_meta'
+[2.249s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['ros']
+[2.250s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ros'
+[2.251s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['cmake', 'python']
+[2.251s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'cmake'
+[2.252s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'python'
+[2.252s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['python_setup_py']
+[2.253s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'python_setup_py'
+[2.254s] Level 1:colcon.colcon_core.package_identification:_identify(setup) by extensions ['ignore', 'ignore_ament_install']
+[2.255s] Level 1:colcon.colcon_core.package_identification:_identify(setup) by extension 'ignore'
+[2.255s] Level 1:colcon.colcon_core.package_identification:_identify(setup) by extension 'ignore_ament_install'
+[2.256s] Level 1:colcon.colcon_core.package_identification:_identify(setup) by extensions ['colcon_pkg']
+[2.257s] Level 1:colcon.colcon_core.package_identification:_identify(setup) by extension 'colcon_pkg'
+[2.257s] Level 1:colcon.colcon_core.package_identification:_identify(setup) by extensions ['colcon_meta']
+[2.258s] Level 1:colcon.colcon_core.package_identification:_identify(setup) by extension 'colcon_meta'
+[2.258s] Level 1:colcon.colcon_core.package_identification:_identify(setup) by extensions ['ros']
+[2.259s] Level 1:colcon.colcon_core.package_identification:_identify(setup) by extension 'ros'
+[2.259s] Level 1:colcon.colcon_core.package_identification:_identify(setup) by extensions ['cmake', 'python']
+[2.260s] Level 1:colcon.colcon_core.package_identification:_identify(setup) by extension 'cmake'
+[2.260s] Level 1:colcon.colcon_core.package_identification:_identify(setup) by extension 'python'
+[2.261s] Level 1:colcon.colcon_core.package_identification:_identify(setup) by extensions ['python_setup_py']
+[2.261s] Level 1:colcon.colcon_core.package_identification:_identify(setup) by extension 'python_setup_py'
+[2.262s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.263s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.263s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.263s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[3.364s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 74 installed packages in /opt/ros/humble
+[3.366s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[3.443s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'cmake_args' from command line to 'None'
+[3.444s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'cmake_target' from command line to 'None'
+[3.445s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.445s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'cmake_clean_cache' from command line to 'False'
+[3.445s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'cmake_clean_first' from command line to 'False'
+[3.445s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'cmake_force_configure' from command line to 'False'
+[3.446s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'ament_cmake_args' from command line to 'None'
+[3.446s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'catkin_cmake_args' from command line to 'None'
+[3.446s] Level 5:colcon.colcon_core.verb:set package 'aruco' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.447s] DEBUG:colcon.colcon_core.verb:Building package 'aruco' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/axior_ws/src/axior_software/build/aruco', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/axior_ws/src/axior_software/install/aruco', 'merge_install': False, 'path': '/home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco', 'symlink_install': False, 'test_result_base': None}
+[3.449s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'cmake_args' from command line to 'None'
+[3.449s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'cmake_target' from command line to 'None'
+[3.450s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.450s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[3.450s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[3.451s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[3.451s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[3.452s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[3.452s] Level 5:colcon.colcon_core.verb:set package 'aruco_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.452s] DEBUG:colcon.colcon_core.verb:Building package 'aruco_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/axior_ws/src/axior_software/build/aruco_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/axior_ws/src/axior_software/install/aruco_msgs', 'merge_install': False, 'path': '/home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco_msgs', 'symlink_install': False, 'test_result_base': None}
+[3.455s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'cmake_args' from command line to 'None'
+[3.455s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'cmake_target' from command line to 'None'
+[3.455s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.456s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[3.456s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'cmake_clean_first' from command line to 'False'
+[3.456s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'cmake_force_configure' from command line to 'False'
+[3.457s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'ament_cmake_args' from command line to 'None'
+[3.457s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[3.457s] Level 5:colcon.colcon_core.verb:set package 'aruco_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.458s] DEBUG:colcon.colcon_core.verb:Building package 'aruco_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/axior_ws/src/axior_software/build/aruco_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/axior_ws/src/axior_software/install/aruco_ros', 'merge_install': False, 'path': '/home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco_ros', 'symlink_install': False, 'test_result_base': None}
+[3.459s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[3.465s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[3.466s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco' with build type 'ament_cmake'
+[3.467s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco'
+[3.482s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[3.484s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.484s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.703s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco_msgs' with build type 'ament_cmake'
+[3.704s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco_msgs'
+[3.706s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.708s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.748s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/axior_ws/src/axior_software/build/aruco': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco -DCMAKE_INSTALL_PREFIX=/home/pi/axior_ws/src/axior_software/install/aruco
+[5.187s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/axior_ws/src/axior_software/build/aruco_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco_msgs -DCMAKE_INSTALL_PREFIX=/home/pi/axior_ws/src/axior_software/install/aruco_msgs
+[12.905s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/axior_ws/src/axior_software/build/aruco_msgs' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco_msgs -DCMAKE_INSTALL_PREFIX=/home/pi/axior_ws/src/axior_software/install/aruco_msgs
+[12.919s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/axior_ws/src/axior_software/build/aruco' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco -DCMAKE_INSTALL_PREFIX=/home/pi/axior_ws/src/axior_software/install/aruco
+[12.929s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/axior_ws/src/axior_software/build/aruco': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/pi/axior_ws/src/axior_software/build/aruco -- -j4 -l4
+[12.966s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aruco_msgs)
+[12.985s] Level 1:colcon.colcon_core.environment:checking '/home/pi/axior_ws/src/axior_software/install/aruco_msgs' for CMake module files
+[12.995s] Level 1:colcon.colcon_core.environment:checking '/home/pi/axior_ws/src/axior_software/install/aruco_msgs' for CMake config files
+[12.999s] Level 1:colcon.colcon_core.environment:checking '/home/pi/axior_ws/src/axior_software/install/aruco_msgs/bin'
+[13.000s] Level 1:colcon.colcon_core.environment:checking '/home/pi/axior_ws/src/axior_software/install/aruco_msgs/lib/pkgconfig/aruco_msgs.pc'
+[13.003s] Level 1:colcon.colcon_core.environment:checking '/home/pi/axior_ws/src/axior_software/install/aruco_msgs/lib/python3.10/site-packages'
+[13.005s] Level 1:colcon.colcon_core.environment:checking '/home/pi/axior_ws/src/axior_software/install/aruco_msgs/bin'
+[13.007s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/axior_ws/src/axior_software/install/aruco_msgs/share/aruco_msgs/package.ps1'
+[13.012s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/axior_ws/src/axior_software/install/aruco_msgs/share/aruco_msgs/package.dsv'
+[13.015s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/axior_ws/src/axior_software/install/aruco_msgs/share/aruco_msgs/package.sh'
+[13.020s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/axior_ws/src/axior_software/install/aruco_msgs/share/aruco_msgs/package.bash'
+[13.026s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/axior_ws/src/axior_software/install/aruco_msgs/share/aruco_msgs/package.zsh'
+[13.032s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/axior_ws/src/axior_software/install/aruco_msgs/share/colcon-core/packages/aruco_msgs)
+[224.744s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete was interrupted
+[224.745s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete again
+[224.777s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished
+[224.777s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[224.780s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[224.780s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[224.886s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[224.886s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[224.887s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[225.043s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[225.044s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/axior_ws/src/axior_software/install/local_setup.ps1'
+[225.053s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pi/axior_ws/src/axior_software/install/_local_setup_util_ps1.py'
+[225.067s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/axior_ws/src/axior_software/install/setup.ps1'
+[225.072s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/axior_ws/src/axior_software/install/local_setup.sh'
+[225.076s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pi/axior_ws/src/axior_software/install/_local_setup_util_sh.py'
+[225.080s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/axior_ws/src/axior_software/install/setup.sh'
+[225.089s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/axior_ws/src/axior_software/install/local_setup.bash'
+[225.092s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/axior_ws/src/axior_software/install/setup.bash'
+[225.100s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/axior_ws/src/axior_software/install/local_setup.zsh'
+[225.104s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/axior_ws/src/axior_software/install/setup.zsh'

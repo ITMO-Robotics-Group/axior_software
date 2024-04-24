@@ -1,0 +1,9 @@
+*.DS_Store
+packages/build
+packages/install
+packages/log
+# .vscode
+.dvc
+__pycache__/
+*.py[cod]
+*$py.class

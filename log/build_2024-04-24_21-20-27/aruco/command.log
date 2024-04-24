@@ -1,0 +1,3 @@
+Invoking command in '/home/pi/axior_ws/src/axior_software/build/aruco': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco -DCMAKE_INSTALL_PREFIX=/home/pi/axior_ws/src/axior_software/install/aruco
+Invoked command in '/home/pi/axior_ws/src/axior_software/build/aruco' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco -DCMAKE_INSTALL_PREFIX=/home/pi/axior_ws/src/axior_software/install/aruco
+Invoking command in '/home/pi/axior_ws/src/axior_software/build/aruco': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/pi/axior_ws/src/axior_software/build/aruco -- -j4 -l4

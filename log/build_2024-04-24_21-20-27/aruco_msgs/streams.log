@@ -1,0 +1,29 @@
+[1.483s] Invoking command in '/home/pi/axior_ws/src/axior_software/build/aruco_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco_msgs -DCMAKE_INSTALL_PREFIX=/home/pi/axior_ws/src/axior_software/install/aruco_msgs
+[1.486s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[4.251s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[8.157s] -- Found std_msgs: 4.2.3 (/opt/ros/humble/share/std_msgs/cmake)
+[8.388s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[8.417s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[8.463s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[8.552s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[8.648s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[9.040s] [31mCMake Error at CMakeLists.txt:11 (find_package):
+[9.040s]   By not providing "Findgeometry_msgs.cmake" in CMAKE_MODULE_PATH this
+[9.041s]   project has asked CMake to find a package configuration file provided by
+[9.041s]   "geometry_msgs", but CMake did not find one.
+[9.042s] 
+[9.042s]   Could not find a package configuration file provided by "geometry_msgs"
+[9.042s]   with any of the following names:
+[9.043s] 
+[9.043s]     geometry_msgsConfig.cmake
+[9.044s]     geometry_msgs-config.cmake
+[9.044s] 
+[9.045s]   Add the installation prefix of "geometry_msgs" to CMAKE_PREFIX_PATH or set
+[9.045s]   "geometry_msgs_DIR" to a directory containing one of the above files.  If
+[9.046s]   "geometry_msgs" provides a separate development package or SDK, be sure it
+[9.046s]   has been installed.
+[9.047s] 
+[9.047s] [0m
+[9.048s] -- Configuring incomplete, errors occurred!
+[9.055s] See also "/home/pi/axior_ws/src/axior_software/build/aruco_msgs/CMakeFiles/CMakeOutput.log".
+[9.200s] Invoked command in '/home/pi/axior_ws/src/axior_software/build/aruco_msgs' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco_msgs -DCMAKE_INSTALL_PREFIX=/home/pi/axior_ws/src/axior_software/install/aruco_msgs

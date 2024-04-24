@@ -1,0 +1,52 @@
+[0.065s] Invoking command in '/home/pi/axior_ws/src/axior_software/build/aruco': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/pi/axior_ws/src/axior_software/build/aruco -- -j4 -l4
+[0.355s] [100%] Built target aruco
+[0.408s] Invoked command in '/home/pi/axior_ws/src/axior_software/build/aruco' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/pi/axior_ws/src/axior_software/build/aruco -- -j4 -l4
+[0.930s] Invoking command in '/home/pi/axior_ws/src/axior_software/build/aruco': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/pi/axior_ws/src/axior_software/build/aruco
+[0.965s] -- Install configuration: ""
+[0.969s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/lib/libaruco.so
+[0.970s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include
+[0.971s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco
+[0.973s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/markerdetector.h
+[0.974s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/fractaldetector.h
+[0.976s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/picoflann.h
+[0.977s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/markerdetector_impl.h
+[0.978s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/timers.h
+[0.979s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/aruco.h
+[0.980s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/cameraparameters.h
+[0.981s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/dictionary_based.h
+[0.982s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/cvdrawingutils.h
+[0.983s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/levmarq.h
+[0.985s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/dictionary.h
+[0.986s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/fractallabelers
+[0.987s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/fractallabelers/fractalmarkerset.h
+[0.989s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/fractallabelers/fractallabeler.h
+[0.990s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/fractallabelers/fractalposetracker.h
+[0.991s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/fractallabelers/fractalmarker.h
+[0.992s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/aruco_cvversioning.h
+[0.993s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/debug.h
+[0.993s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/posetracker.h
+[0.994s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/marker.h
+[0.996s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/aruco_export.h
+[0.997s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/markerlabeler.h
+[0.998s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/markermap.h
+[0.999s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/include/aruco/ippe.h
+[1.000s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/environment/library_path.sh
+[1.001s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/environment/library_path.dsv
+[1.003s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/ament_index/resource_index/package_run_dependencies/aruco
+[1.004s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/ament_index/resource_index/parent_prefix_path/aruco
+[1.005s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/environment/ament_prefix_path.sh
+[1.007s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/environment/ament_prefix_path.dsv
+[1.009s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/environment/path.sh
+[1.011s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/environment/path.dsv
+[1.014s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/local_setup.bash
+[1.014s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/local_setup.sh
+[1.017s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/local_setup.zsh
+[1.017s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/local_setup.dsv
+[1.021s] -- Installing: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/package.dsv
+[1.021s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/ament_index/resource_index/packages/aruco
+[1.023s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.024s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/cmake/ament_cmake_export_libraries-extras.cmake
+[1.026s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/cmake/arucoConfig.cmake
+[1.028s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/cmake/arucoConfig-version.cmake
+[1.028s] -- Up-to-date: /home/pi/axior_ws/src/axior_software/install/aruco/share/aruco/package.xml
+[1.049s] Invoked command in '/home/pi/axior_ws/src/axior_software/build/aruco' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/pi/axior_ws/src/axior_software/build/aruco

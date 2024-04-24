@@ -1,0 +1,37 @@
+[0.066s] Invoking command in '/home/pi/axior_ws/src/axior_software/build/aruco': /usr/bin/cmake /home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco -DCMAKE_INSTALL_PREFIX=/home/pi/axior_ws/src/axior_software/install/aruco
+[0.813s] -- The C compiler identification is GNU 11.4.0
+[1.531s] -- The CXX compiler identification is GNU 11.4.0
+[1.580s] -- Detecting C compiler ABI info
+[2.111s] -- Detecting C compiler ABI info - done
+[2.142s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.146s] -- Detecting C compile features
+[2.152s] -- Detecting C compile features - done
+[2.184s] -- Detecting CXX compiler ABI info
+[2.869s] -- Detecting CXX compiler ABI info - done
+[2.905s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.906s] -- Detecting CXX compile features
+[2.908s] -- Detecting CXX compile features - done
+[3.109s] [33mCMake Warning at CMakeLists.txt:11 (find_package):
+[3.110s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[3.110s]   has asked CMake to find a package configuration file provided by
+[3.111s]   "ament_cmake", but CMake did not find one.
+[3.111s] 
+[3.112s]   Could not find a package configuration file provided by "ament_cmake" with
+[3.112s]   any of the following names:
+[3.113s] 
+[3.126s]     ament_cmakeConfig.cmake
+[3.126s]     ament_cmake-config.cmake
+[3.127s] 
+[3.127s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[3.127s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[3.128s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[3.128s]   has been installed.
+[3.128s] 
+[3.129s] [0m
+[3.309s] -- Found OpenCV: /usr (found suitable version "4.5.4", minimum required is "4.2.0") 
+[3.319s] -- Configuring incomplete, errors occurred!
+[3.320s] See also "/home/pi/axior_ws/src/axior_software/build/aruco/CMakeFiles/CMakeOutput.log".
+[3.321s] [31mCMake Error at CMakeLists.txt:68 (ament_export_include_directories):
+[3.330s]   Unknown CMake command "ament_export_include_directories".
+[3.331s] 
+[3.331s] [0m
