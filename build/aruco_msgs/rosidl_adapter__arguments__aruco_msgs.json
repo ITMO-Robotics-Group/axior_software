@@ -1,7 +1,0 @@
-{
-  "package_name": "aruco_msgs",
-  "non_idl_tuples": [
-    "/home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco_msgs:msg/Marker.msg",
-    "/home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco_msgs:msg/MarkerArray.msg"
-  ]
-}

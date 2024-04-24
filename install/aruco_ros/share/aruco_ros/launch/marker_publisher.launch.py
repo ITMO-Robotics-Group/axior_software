@@ -1,1 +1,0 @@
-/home/pi/axior_ws/src/axior_software/packages/aruco_localization/aruco_ros/launch/marker_publisher.launch.py

@@ -1,1 +1,0 @@
-/home/pi/axior_ws/src/axior_software/build/aruco_msgs/rosidl_cmake/rosidl_cmake-extras.cmake

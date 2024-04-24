@@ -1,4 +1,0 @@
-[0.142s] Invoking command in '/home/pi/axior_ws/src/axior_software/build/aruco': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/pi/axior_ws/src/axior_software/build/aruco -- -j4 -l4
-[0.664s] [35m[1mConsolidate compiler generated dependencies of target aruco[0m
-[0.964s] [  5%] [32m[1mLinking CXX shared library libaruco.so[0m
-[4.162s] [100%] Built target aruco

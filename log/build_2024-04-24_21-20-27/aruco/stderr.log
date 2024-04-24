@@ -1,4 +1,0 @@
-gmake[2]: *** Deleting file 'libaruco.so'
-gmake[2]: *** [CMakeFiles/aruco.dir/build.make:407: libaruco.so] Interrupt
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/aruco.dir/all] Interrupt
-gmake: *** [Makefile:146: all] Interrupt
