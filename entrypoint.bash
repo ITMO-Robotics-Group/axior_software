@@ -10,7 +10,7 @@ source /opt/ros/humble/setup.bash
 
 . ~/ros2_humble/install/local_setup.bash
 
-. install/setup.bash
+# .install/setup.bash
 
 # echo "ROS_DISTRO: $ROS_DISTRO"
 # echo "ROS_ROOT: $ROS_ROOT"
