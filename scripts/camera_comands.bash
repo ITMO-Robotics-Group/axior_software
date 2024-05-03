@@ -5,3 +5,5 @@
 # ros2 run realsense2_camera realsense2_camera_node
 
 # ros2 launch foxglove_bridge foxglove_bridge_launch.xml
+
+# ros2 run aruco_localization aruco_localization

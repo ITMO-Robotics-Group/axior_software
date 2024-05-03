@@ -16,7 +16,7 @@ def launch_setup(context, *args, **kwargs):
         'marker_id2': LaunchConfiguration('marker_id2'),
         'normalizeImage': LaunchConfiguration('dct_normalization'),
         'dct_components_to_remove': LaunchConfiguration('dct_filter_size'),
-        'parent_name': 'stereo_gazebo_' + eye + '_camera_optical_frame',
+        'parent_name': 'stereo_gao_' + eye + '_camera_optical_frame',
         'child_name1': LaunchConfiguration('marker1_frame'),
         'child_name2': LaunchConfiguration('marker2_frame'),
     }
