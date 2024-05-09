@@ -4,7 +4,7 @@
   <name>aruco_localization</name>
   <version>0.0.0</version>
   <description>Localization using ArUco markers package</description>
-  <maintainer email="bulatminnakh@gmail.com">Bulat</maintainer>
+  <maintainer email="novichkov.dmitriy04@mail.ru">Dmitriy</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
