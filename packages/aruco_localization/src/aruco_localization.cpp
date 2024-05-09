@@ -15,18 +15,18 @@
 
 using std::placeholders::_1;
 
-const static std::string kImageRawTopic = "/color/image_raw";
-const static std::string kCameraInfoTopic = "/color/camera_info";
+const static std::string kImageRawTopic = "/camera/camera/color/image_raw";
+const static std::string kCameraInfoTopic = "/camera/camera/color/camera_info";
 const static std::string kArucoLocalizationNodeName = "aruco_localization";
-const static std::string kArucoOdometryTopic = "/truck/aruco/odometry";
-const static std::string kArucoPoseTopic = "/truck/aruco/pose";
-const static std::string kArucoMarkersTopic = "/truck/aruco/vis/markers";
-const static std::string kArucoTransformsTopic = "/truck/aruco/vis/transforms";
+const static std::string kArucoOdometryTopic = "/axior/aruco/odometry";
+const static std::string kArucoPoseTopic = "/axior/aruco/pose";
+const static std::string kArucoMarkersTopic = "/axior/aruco/vis/markers";
+const static std::string kArucoTransformsTopic = "/axior/aruco/vis/transforms";
 
 const static std::string kCameraFrameId = "camera";
 
 const static int kCameraMatrixSize = 3;
-const static int kDistCoeffsCount = 2;
+const static int kDistCoeffsCount = 5;
 const static int kCV_64FSize = 8;
 const static int kMarkerCount = 250;
 
@@ -38,7 +38,7 @@ ArucoLocalization::ArucoLocalization()
       dist_coeffs_(1, kDistCoeffsCount, CV_64F),
       detector_parameters_(cv::makePtr<cv::aruco::DetectorParameters>()),
       marker_dictionary_(cv::makePtr<cv::aruco::Dictionary>(
-            cv::aruco::getPredefinedDictionary(cv::aruco::DICT_5X5_50))),
+            cv::aruco::getPredefinedDictionary(cv::aruco::DICT_5X5_250))),
       coordinator_(kMarkerCount) {
 
     rclcpp::QoS qos(1);
@@ -59,7 +59,7 @@ ArucoLocalization::ArucoLocalization()
 }
 
 void ArucoLocalization::HandleImage(sensor_msgs::msg::Image::ConstSharedPtr msg) {
-    RCLCPP_INFO(this->get_logger(), "HandleImage got message");
+    // RCLCPP_INFO(this->get_logger(), "HandleImage got message");
     auto cv_image = cv_bridge::toCvShare(msg);
 
     std::vector<int> marker_ids;
@@ -67,8 +67,11 @@ void ArucoLocalization::HandleImage(sensor_msgs::msg::Image::ConstSharedPtr msg)
     
     cv::aruco::detectMarkers(cv_image->image, marker_dictionary_, marker_corners, marker_ids,
                              detector_parameters_, rejected_candidates);
-
-    RCLCPP_INFO(this->get_logger(), "HandleImage detected %ld markers", marker_ids.size());
+    // RCLCPP_INFO(this->get_logger(), "HandleImage detected %ld markers", detector_parameters_);
+    if(marker_ids.size() > 0)
+        RCLCPP_INFO(this->get_logger(), "ID %i markers", marker_ids[0]);
+    else    
+        RCLCPP_INFO(this->get_logger(), "HandleImage detected %li markers", marker_ids.size());
 
     std::vector<cv::Vec3d> rvecs, tvecs;
 
@@ -146,7 +149,7 @@ void ArucoLocalization::HandleImage(sensor_msgs::msg::Image::ConstSharedPtr msg)
 }
 
 void ArucoLocalization::UpdateCameraInfo(sensor_msgs::msg::CameraInfo::ConstSharedPtr msg) {
-    RCLCPP_INFO(this->get_logger(), "UpdateCameraInfo got message");
+    // RCLCPP_INFO(this->get_logger(), "UpdateCameraInfo got message");
 
     static_assert(std::tuple_size<decltype(msg->k)>::value ==
                   kCameraMatrixSize * kCameraMatrixSize);
