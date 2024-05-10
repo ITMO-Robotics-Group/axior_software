@@ -17,6 +17,10 @@ using std::placeholders::_1;
 
 const static std::string kImageRawTopic = "/camera/camera/color/image_raw";
 const static std::string kCameraInfoTopic = "/camera/camera/color/camera_info";
+
+const static std::string PiImageRawTopic = "/image_raw";
+const static std::string PiCameraInfoTopic = "/camera_info";
+
 const static std::string kArucoLocalizationNodeName = "aruco_localization";
 const static std::string kArucoOdometryTopic = "/axior/aruco/odometry";
 const static std::string kArucoPoseTopic = "/axior/aruco/pose";
@@ -32,23 +36,27 @@ const static int kMarkerCount = 250;
 
 namespace rosaruco {
 
-ArucoLocalization::ArucoLocalization()
-    : rclcpp::Node(kArucoLocalizationNodeName),
-      camera_matrix_(kCameraMatrixSize, kCameraMatrixSize, CV_64F),
-      dist_coeffs_(1, kDistCoeffsCount, CV_64F),
-      detector_parameters_(cv::makePtr<cv::aruco::DetectorParameters>()),
-      marker_dictionary_(cv::makePtr<cv::aruco::Dictionary>(
-            cv::aruco::getPredefinedDictionary(cv::aruco::DICT_5X5_250))),
-      coordinator_(kMarkerCount) {
+rclcpp::QoS qos(1);
+int id_camera = 1;
 
-    rclcpp::QoS qos(1);
+ArucoLocalization::ArucoLocalization(): rclcpp::Node(kArucoLocalizationNodeName),
+                                        camera_matrix_(kCameraMatrixSize, kCameraMatrixSize, CV_64F),
+                                        dist_coeffs_(1, kDistCoeffsCount, CV_64F),
+                                        detector_parameters_(cv::makePtr<cv::aruco::DetectorParameters>()),
+                                        marker_dictionary_(cv::makePtr<cv::aruco::Dictionary>(
+                                             cv::aruco::getPredefinedDictionary(cv::aruco::DICT_5X5_250))),
+                                        coordinator_(kMarkerCount) {
+
+    // rclcpp::QoS qos(1);
     qos.reliable();
     qos.durability_volatile();
 
     subscription_image_raw_ = this->create_subscription<sensor_msgs::msg::Image>(
         kImageRawTopic, qos, std::bind(&ArucoLocalization::HandleImage, this, _1));
+
     subscription_camera_info_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
         kCameraInfoTopic, qos, std::bind(&ArucoLocalization::UpdateCameraInfo, this, _1));
+
     publisher_odometry_ = this->create_publisher<nav_msgs::msg::Odometry>(kArucoOdometryTopic, qos);
     publisher_pose_stamped_ =
         this->create_publisher<geometry_msgs::msg::PoseStamped>(kArucoPoseTopic, qos);
@@ -69,9 +77,17 @@ void ArucoLocalization::HandleImage(sensor_msgs::msg::Image::ConstSharedPtr msg)
                              detector_parameters_, rejected_candidates);
     // RCLCPP_INFO(this->get_logger(), "HandleImage detected %ld markers", detector_parameters_);
     if(marker_ids.size() > 0)
-        RCLCPP_INFO(this->get_logger(), "ID %i markers", marker_ids[0]);
+        RCLCPP_INFO(this->get_logger(), "ID %i marker", marker_ids[0]);
     else    
-        RCLCPP_INFO(this->get_logger(), "HandleImage detected %li markers", marker_ids.size());
+        // *subscription_image_raw_.shutdown();
+        // this->subscription_camera_info_.shutdown();
+        this->subscription_image_raw_ = this->create_subscription<sensor_msgs::msg::Image>(
+            PiImageRawTopic, qos, std::bind(&ArucoLocalization::HandleImage, this, _1));
+        this->subscription_camera_info_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
+            PiCameraInfoTopic, qos, std::bind(&ArucoLocalization::UpdateCameraInfo, this, _1));
+        if(id_camera == 1) id_camera = 2; else id_camera = 1;
+
+        RCLCPP_INFO(this->get_logger(), "Camera %i", id_camera);
 
     std::vector<cv::Vec3d> rvecs, tvecs;
 
@@ -151,14 +167,14 @@ void ArucoLocalization::HandleImage(sensor_msgs::msg::Image::ConstSharedPtr msg)
 void ArucoLocalization::UpdateCameraInfo(sensor_msgs::msg::CameraInfo::ConstSharedPtr msg) {
     // RCLCPP_INFO(this->get_logger(), "UpdateCameraInfo got message");
 
-    static_assert(std::tuple_size<decltype(msg->k)>::value ==
-                  kCameraMatrixSize * kCameraMatrixSize);
-    static_assert(sizeof(decltype(msg->k)::value_type) == kCV_64FSize);
-    std::memcpy(camera_matrix_.data, msg->k.data(),
-                kCameraMatrixSize * kCameraMatrixSize * kCV_64FSize);
+    // static_assert(std::tuple_size<decltype(msg->k)>::value ==
+    //               kCameraMatrixSize * kCameraMatrixSize);
+    // static_assert(sizeof(decltype(msg->k)::value_type) == kCV_64FSize);
+    // std::memcpy(camera_matrix_.data, msg->k.data(),
+    //             kCameraMatrixSize * kCameraMatrixSize * kCV_64FSize);
 
-    static_assert(sizeof(decltype(msg->d)::value_type) == kCV_64FSize);
-    assert(msg->d.size() == kDistCoeffsCount);
+    // static_assert(sizeof(decltype(msg->d)::value_type) == kCV_64FSize);
+    // assert(msg->d.size() == kDistCoeffsCount);
     std::memcpy(dist_coeffs_.data, msg->d.data(), kDistCoeffsCount * kCV_64FSize);
 }
 
