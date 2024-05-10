@@ -57,7 +57,7 @@ ArucoLocalization::ArucoLocalization(): rclcpp::Node(kArucoLocalizationNodeName)
     subscription_camera_info_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
         kCameraInfoTopic, qos, std::bind(&ArucoLocalization::UpdateCameraInfo, this, _1));
 
-    publisher_odometry_ = this->create_publisher<nav_msgs::msg::Odometry>(kArucoOdometryTopic, qos);
+    // publisher_odometry_ = this->create_publisher<nav_msgs::msg::Odometry>(kArucoOdometryTopic, qos);
     publisher_pose_stamped_ =
         this->create_publisher<geometry_msgs::msg::PoseStamped>(kArucoPoseTopic, qos);
     publisher_marker_array_ =
@@ -85,9 +85,20 @@ void ArucoLocalization::HandleImage(sensor_msgs::msg::Image::ConstSharedPtr msg)
             PiImageRawTopic, qos, std::bind(&ArucoLocalization::HandleImage, this, _1));
         this->subscription_camera_info_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
             PiCameraInfoTopic, qos, std::bind(&ArucoLocalization::UpdateCameraInfo, this, _1));
-        if(id_camera == 1) id_camera = 2; else id_camera = 1;
-
-        RCLCPP_INFO(this->get_logger(), "Camera %i", id_camera);
+        if(id_camera == 1) {
+            id_camera = 2;
+            this->subscription_image_raw_ = this->create_subscription<sensor_msgs::msg::Image>(
+                PiImageRawTopic, qos, std::bind(&ArucoLocalization::HandleImage, this, _1));
+            this->subscription_camera_info_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
+                PiCameraInfoTopic, qos, std::bind(&ArucoLocalization::UpdateCameraInfo, this, _1));
+        }else {
+            id_camera = 1;
+            this->subscription_image_raw_ = this->create_subscription<sensor_msgs::msg::Image>(
+                kImageRawTopic, qos, std::bind(&ArucoLocalization::HandleImage, this, _1));
+            this->subscription_camera_info_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
+                kCameraInfoTopic, qos, std::bind(&ArucoLocalization::UpdateCameraInfo, this, _1));
+        }
+        // RCLCPP_INFO(this->get_logger(), "Change camera %i", id_camera);
 
     std::vector<cv::Vec3d> rvecs, tvecs;
 
@@ -139,10 +150,10 @@ void ArucoLocalization::HandleImage(sensor_msgs::msg::Image::ConstSharedPtr msg)
         publisher_tf2_transform_->publish(tf_msg);
     }
 
-    nav_msgs::msg::Odometry odometry_msg;
-    odometry_msg.pose.pose = pose_msg;
-    odometry_msg.header.stamp = msg->header.stamp;
-    publisher_odometry_->publish(odometry_msg);
+    // nav_msgs::msg::Odometry odometry_msg;
+    // odometry_msg.pose.pose = pose_msg;
+    // odometry_msg.header.stamp = msg->header.stamp;
+    // publisher_odometry_->publish(odometry_msg);
 
     if (publisher_marker_array_->get_subscription_count()) {
         visualization_msgs::msg::MarkerArray marker_array;
@@ -175,7 +186,7 @@ void ArucoLocalization::UpdateCameraInfo(sensor_msgs::msg::CameraInfo::ConstShar
 
     // static_assert(sizeof(decltype(msg->d)::value_type) == kCV_64FSize);
     // assert(msg->d.size() == kDistCoeffsCount);
-    std::memcpy(dist_coeffs_.data, msg->d.data(), kDistCoeffsCount * kCV_64FSize);
+    // std::memcpy(dist_coeffs_.data, msg->d.data(), kDistCoeffsCount * kCV_64FSize);
 }
 
 }
