@@ -12,6 +12,7 @@
 #include <visualization_msgs/msg/marker_array.hpp>
 #include <tf2_msgs/msg/tf_message.hpp>
 
+#include <iostream>
 #include "camera_tracker.hpp"
 
 /**

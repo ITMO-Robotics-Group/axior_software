@@ -24,8 +24,8 @@ const static std::string PiCameraInfoTopic = "/camera_info";
 const static std::string kArucoLocalizationNodeName = "aruco_localization";
 const static std::string kArucoOdometryTopic = "/axior/aruco/odometry";
 const static std::string kArucoPoseTopic = "/axior/aruco/pose";
-const static std::string kArucoMarkersTopic = "/axior/aruco/vis/markers";
-const static std::string kArucoTransformsTopic = "/axior/aruco/vis/transforms";
+const static std::string kArucoMarkersTopic = "/axior/aruco/markers";
+const static std::string kArucoTransformsTopic = "/axior/aruco/transforms";
 
 const static std::string kCameraFrameId = "camera";
 
@@ -57,7 +57,7 @@ ArucoLocalization::ArucoLocalization(): rclcpp::Node(kArucoLocalizationNodeName)
     subscription_camera_info_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
         kCameraInfoTopic, qos, std::bind(&ArucoLocalization::UpdateCameraInfo, this, _1));
 
-    // publisher_odometry_ = this->create_publisher<nav_msgs::msg::Odometry>(kArucoOdometryTopic, qos);
+    publisher_odometry_ = this->create_publisher<nav_msgs::msg::Odometry>(kArucoOdometryTopic, qos);
     publisher_pose_stamped_ =
         this->create_publisher<geometry_msgs::msg::PoseStamped>(kArucoPoseTopic, qos);
     publisher_marker_array_ =
@@ -124,31 +124,32 @@ void ArucoLocalization::HandleImage(sensor_msgs::msg::Image::ConstSharedPtr msg)
 
     pose_msg.orientation = orientation_msg;
 
-    if (publisher_pose_stamped_->get_subscription_count()) {
-        geometry_msgs::msg::PoseStamped pose_stamped;
-        pose_stamped.pose = pose_msg;
-        pose_stamped.header.stamp = msg->header.stamp;
-        publisher_pose_stamped_->publish(pose_stamped);
-    }
+    // if (publisher_pose_stamped_->get_subscription_count()) {
+    //     geometry_msgs::msg::PoseStamped pose_stamped;
+    //     pose_stamped.pose = pose_msg;
+    //     pose_stamped.header.stamp = msg->header.stamp;
+    //     publisher_pose_stamped_->publish(pose_stamped);
+    //     RCLCPP_INFO(this->get_logger(), "POSE GETTING");
+    // }
 
-    if (publisher_tf2_transform_->get_subscription_count()) {
-        geometry_msgs::msg::TransformStamped transform_msg;
+    // if (publisher_tf2_transform_->get_subscription_count()) {
+    //     geometry_msgs::msg::TransformStamped transform_msg;
 
-        transform_msg.header.stamp = msg->header.stamp;
-        transform_msg.header.frame_id = "";
-        transform_msg.child_frame_id = kCameraFrameId;
+    //     transform_msg.header.stamp = msg->header.stamp;
+    //     transform_msg.header.frame_id = "";
+    //     transform_msg.child_frame_id = kCameraFrameId;
 
-        geometry_msgs::msg::Vector3 translation_msg;
-        SetPoint(pose.point, translation_msg);
+    //     geometry_msgs::msg::Vector3 translation_msg;
+    //     SetPoint(pose.point, translation_msg);
 
-        transform_msg.transform.rotation = orientation_msg;
-        transform_msg.transform.translation = translation_msg;
+    //     transform_msg.transform.rotation = orientation_msg;
+    //     transform_msg.transform.translation = translation_msg;
 
-        tf2_msgs::msg::TFMessage tf_msg;
-        tf_msg.transforms.push_back(transform_msg);
+    //     tf2_msgs::msg::TFMessage tf_msg;
+    //     tf_msg.transforms.push_back(transform_msg);
 
-        publisher_tf2_transform_->publish(tf_msg);
-    }
+    //     publisher_tf2_transform_->publish(tf_msg);
+    // }
 
     // nav_msgs::msg::Odometry odometry_msg;
     // odometry_msg.pose.pose = pose_msg;
