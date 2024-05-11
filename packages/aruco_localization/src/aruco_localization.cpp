@@ -79,17 +79,17 @@ void ArucoLocalization::HandleImage(sensor_msgs::msg::Image::ConstSharedPtr msg)
     if(marker_ids.size() > 0)
         RCLCPP_INFO(this->get_logger(), "ID %i marker", marker_ids[0]);
     else    
-        this->subscription_image_raw_ = this->create_subscription<sensor_msgs::msg::Image>(
-            PiImageRawTopic, qos, std::bind(&ArucoLocalization::HandleImage, this, _1));
-        this->subscription_camera_info_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
-            PiCameraInfoTopic, qos, std::bind(&ArucoLocalization::UpdateCameraInfo, this, _1));
+        // this->subscription_image_raw_ = this->create_subscription<sensor_msgs::msg::Image>(
+        //     PiImageRawTopic, qos, std::bind(&ArucoLocalization::HandleImage, this, _1));
+        // this->subscription_camera_info_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
+        //     PiCameraInfoTopic, qos, std::bind(&ArucoLocalization::UpdateCameraInfo, this, _1));
 
         if(id_camera == 1) {
             id_camera = 2;
-            this->subscription_image_raw_ = this->create_subscription<sensor_msgs::msg::Image>(
-                PiImageRawTopic, qos, std::bind(&ArucoLocalization::HandleImage, this, _1));
-            this->subscription_camera_info_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
-                PiCameraInfoTopic, qos, std::bind(&ArucoLocalization::UpdateCameraInfo, this, _1));
+            // this->subscription_image_raw_ = this->create_subscription<sensor_msgs::msg::Image>(
+            //     PiImageRawTopic, qos, std::bind(&ArucoLocalization::HandleImage, this, _1));
+            // this->subscription_camera_info_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
+            //     PiCameraInfoTopic, qos, std::bind(&ArucoLocalization::UpdateCameraInfo, this, _1));
         }else {
             id_camera = 1;
             this->subscription_image_raw_ = this->create_subscription<sensor_msgs::msg::Image>(
@@ -101,11 +101,11 @@ void ArucoLocalization::HandleImage(sensor_msgs::msg::Image::ConstSharedPtr msg)
 
     std::vector<cv::Vec3d> rvecs, tvecs;
 
-    cv::aruco::estimatePoseSingleMarkers(marker_corners, 1, camera_matrix_,
+    cv::aruco::estimatePoseSingleMarkers(marker_corners, 0.05, camera_matrix_,
                                             dist_coeffs_, rvecs, tvecs);
 
     std::vector<Transform> from_cam_to_marker;
-    from_cam_to_marker.reserve(rvecs.size());
+    // from_cam_to_marker.reserve(rvecs.size());
 
     // for (size_t i = 0; i < rvecs.size(); i++) {
     //     from_cam_to_marker.push_back(GetTransform(rvecs[i], tvecs[i]));
@@ -173,7 +173,17 @@ void ArucoLocalization::HandleImage(sensor_msgs::msg::Image::ConstSharedPtr msg)
         //     marker.ids[0] = marker_ids[0];
         // }
         marker_array.id = marker_ids[0];
-        // marker_array.ids = marker_ids
+
+        marker_array.poses.position.x = tvecs[0][0];
+        marker_array.poses.position.y = tvecs[0][1];
+        marker_array.poses.position.z = tvecs[0][2];
+
+        marker_array.poses.orientation.x = rvecs[0][0];
+        marker_array.poses.orientation.y = rvecs[0][1];
+        marker_array.poses.orientation.z = rvecs[0][2];
+        marker_array.poses.orientation.w = rvecs[0][3];
+        
+        // RCLCPP_INFO(this->get_logger(), "%f", rvecs[0][0]);
 
         publisher_marker_array_->publish(marker_array);
     }
@@ -182,15 +192,15 @@ void ArucoLocalization::HandleImage(sensor_msgs::msg::Image::ConstSharedPtr msg)
 void ArucoLocalization::UpdateCameraInfo(sensor_msgs::msg::CameraInfo::ConstSharedPtr msg) {
     // RCLCPP_INFO(this->get_logger(), "UpdateCameraInfo got message");
 
-    // static_assert(std::tuple_size<decltype(msg->k)>::value ==
-    //               kCameraMatrixSize * kCameraMatrixSize);
-    // static_assert(sizeof(decltype(msg->k)::value_type) == kCV_64FSize);
-    // std::memcpy(camera_matrix_.data, msg->k.data(),
-    //             kCameraMatrixSize * kCameraMatrixSize * kCV_64FSize);
+    static_assert(std::tuple_size<decltype(msg->k)>::value ==
+                  kCameraMatrixSize * kCameraMatrixSize);
+    static_assert(sizeof(decltype(msg->k)::value_type) == kCV_64FSize);
+    std::memcpy(camera_matrix_.data, msg->k.data(),
+                kCameraMatrixSize * kCameraMatrixSize * kCV_64FSize);
 
-    // static_assert(sizeof(decltype(msg->d)::value_type) == kCV_64FSize);
-    // assert(msg->d.size() == kDistCoeffsCount);
-    // std::memcpy(dist_coeffs_.data, msg->d.data(), kDistCoeffsCount * kCV_64FSize);
+    static_assert(sizeof(decltype(msg->d)::value_type) == kCV_64FSize);
+    assert(msg->d.size() == kDistCoeffsCount);
+    std::memcpy(dist_coeffs_.data, msg->d.data(), kDistCoeffsCount * kCV_64FSize);
 }
 
 }
