@@ -12,6 +12,7 @@ find_package(visualization_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(tf2_msgs REQUIRED)
+find_package(aruco_msgs REQUIRED)
 
 set(THIS_PACKAGE_INCLUDE_DEPENDS
     OpenCV
@@ -24,7 +25,7 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
     tf2_ros
     tf2_geometry_msgs
     # aruco
-    # aruco_msgs
+    aruco_msgs
     sensor_msgs
     visualization_msgs
 )
@@ -51,7 +52,8 @@ ament_target_dependencies(
     tf2
     tf2_geometry_msgs
     tf2_msgs
-    visualization_msgs )
+    visualization_msgs 
+    aruco_msgs)
 
 install(TARGETS
     ${PROJECT_NAME}

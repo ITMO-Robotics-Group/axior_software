@@ -57,13 +57,13 @@ ArucoLocalization::ArucoLocalization(): rclcpp::Node(kArucoLocalizationNodeName)
     subscription_camera_info_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
         kCameraInfoTopic, qos, std::bind(&ArucoLocalization::UpdateCameraInfo, this, _1));
 
-    publisher_odometry_ = this->create_publisher<nav_msgs::msg::Odometry>(kArucoOdometryTopic, qos);
-    publisher_pose_stamped_ =
-        this->create_publisher<geometry_msgs::msg::PoseStamped>(kArucoPoseTopic, qos);
+    // publisher_odometry_ = this->create_publisher<nav_msgs::msg::Odometry>(kArucoOdometryTopic, qos);
+    // publisher_pose_stamped_ =
+    //     this->create_publisher<geometry_msgs::msg::PoseStamped>(kArucoPoseTopic, qos);
     publisher_marker_array_ =
-        this->create_publisher<visualization_msgs::msg::MarkerArray>(kArucoMarkersTopic, qos);
-    publisher_tf2_transform_ =
-        this->create_publisher<tf2_msgs::msg::TFMessage>(kArucoTransformsTopic, qos);
+        this->create_publisher<aruco_msgs::msg::ArucoMarker>(kArucoMarkersTopic, qos);
+    // publisher_tf2_transform_ =
+    //     this->create_publisher<tf2_msgs::msg::TFMessage>(kArucoTransformsTopic, qos);
 }
 
 void ArucoLocalization::HandleImage(sensor_msgs::msg::Image::ConstSharedPtr msg) {
@@ -79,12 +79,11 @@ void ArucoLocalization::HandleImage(sensor_msgs::msg::Image::ConstSharedPtr msg)
     if(marker_ids.size() > 0)
         RCLCPP_INFO(this->get_logger(), "ID %i marker", marker_ids[0]);
     else    
-        // *subscription_image_raw_.shutdown();
-        // this->subscription_camera_info_.shutdown();
         this->subscription_image_raw_ = this->create_subscription<sensor_msgs::msg::Image>(
             PiImageRawTopic, qos, std::bind(&ArucoLocalization::HandleImage, this, _1));
         this->subscription_camera_info_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
             PiCameraInfoTopic, qos, std::bind(&ArucoLocalization::UpdateCameraInfo, this, _1));
+
         if(id_camera == 1) {
             id_camera = 2;
             this->subscription_image_raw_ = this->create_subscription<sensor_msgs::msg::Image>(
@@ -108,21 +107,21 @@ void ArucoLocalization::HandleImage(sensor_msgs::msg::Image::ConstSharedPtr msg)
     std::vector<Transform> from_cam_to_marker;
     from_cam_to_marker.reserve(rvecs.size());
 
-    for (size_t i = 0; i < rvecs.size(); i++) {
-        from_cam_to_marker.push_back(GetTransform(rvecs[i], tvecs[i]));
-    }
+    // for (size_t i = 0; i < rvecs.size(); i++) {
+    //     from_cam_to_marker.push_back(GetTransform(rvecs[i], tvecs[i]));
+    // }
     
-    coordinator_.Update(marker_ids, from_cam_to_marker);
+    // coordinator_.Update(marker_ids, from_cam_to_marker);
 
-    auto pose = coordinator_.GetPose();
+    // auto pose = coordinator_.GetPose();
 
-    geometry_msgs::msg::Pose pose_msg;
+    // geometry_msgs::msg::Pose pose_msg;
 
-    SetPoint(pose.point, pose_msg.position);
+    // SetPoint(pose.point, pose_msg.position);
     
-    auto orientation_msg = tf2::toMsg(pose.orientation);
+    // auto orientation_msg = tf2::toMsg(pose.orientation);
 
-    pose_msg.orientation = orientation_msg;
+    // pose_msg.orientation = orientation_msg;
 
     // if (publisher_pose_stamped_->get_subscription_count()) {
     //     geometry_msgs::msg::PoseStamped pose_stamped;
@@ -156,21 +155,25 @@ void ArucoLocalization::HandleImage(sensor_msgs::msg::Image::ConstSharedPtr msg)
     // odometry_msg.header.stamp = msg->header.stamp;
     // publisher_odometry_->publish(odometry_msg);
 
-    if (publisher_marker_array_->get_subscription_count()) {
-        visualization_msgs::msg::MarkerArray marker_array;
+    if (publisher_marker_array_->get_subscription_count() && marker_ids.size() > 0) {
+        // RCLCPP_INFO(this->get_logger(), "TOPIC PUBLISHING");
+        aruco_msgs::msg::ArucoMarker marker_array;
 
         std::unordered_set<int> visible_markers(marker_ids.begin(), marker_ids.end());
 
-        for (size_t i = 0; i < kMarkerCount; i++) {
-            auto to_anchor = coordinator_.GetTransformToAnchor(i);
-            if (to_anchor) {
-                AddLabeledMarker(marker_array.markers, *to_anchor, i, 1.0, visible_markers.count(i));
-            }
-        }
+        // for (size_t i = 0; i < kMarkerCount; i++) {
+        //     auto to_anchor = coordinator_.GetTransformToAnchor(i);
+        //     if (to_anchor) {
+        //         AddLabeledMarker(marker_array.ids, *to_anchor, i, 1.0, visible_markers.count(i));
+        //     }
+        // }
 
-        for (auto &marker : marker_array.markers) {
-            marker.header.stamp = msg->header.stamp;
-        }
+        // for (auto &marker : marker_array.ids) {
+        //     // marker.header.stamp = msg->header.stamp;
+        //     marker.ids[0] = marker_ids[0];
+        // }
+        marker_array.id = marker_ids[0];
+        // marker_array.ids = marker_ids
 
         publisher_marker_array_->publish(marker_array);
     }

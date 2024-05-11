@@ -12,9 +12,8 @@
 #include <visualization_msgs/msg/marker_array.hpp>
 #include <tf2_msgs/msg/tf_message.hpp>
 
-#include <iostream>
 #include "camera_tracker.hpp"
-
+#include "aruco_msgs/msg/aruco_marker.hpp"
 /**
  * node gets messages from two topics:
  *
@@ -42,7 +41,7 @@ class ArucoLocalization : public rclcpp::Node {
 
     rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr publisher_odometry_;
     rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr publisher_pose_stamped_;
-    rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr publisher_marker_array_;
+    rclcpp::Publisher<aruco_msgs::msg::ArucoMarker>::SharedPtr publisher_marker_array_;
     rclcpp::Publisher<tf2_msgs::msg::TFMessage>::SharedPtr publisher_tf2_transform_;
 
     cv::Mat camera_matrix_, dist_coeffs_;
