@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'gui = serial_motor_demo.gui:main',
+            # 'gui = serial_motor_demo.gui:main',
             'driver = serial_motor_demo.driver:main'
         ],
     },

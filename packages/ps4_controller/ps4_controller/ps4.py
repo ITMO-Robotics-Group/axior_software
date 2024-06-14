@@ -33,16 +33,7 @@ class PS4ControllerNode(Node):
         commands.speed_right = round(255 * msg.axes[3], 3)  # Right stick vertical axis
         self.publisher_.publish(commands)
 
-    # def motor_command_callback(self, motor_command):
-    #     if (motor_command.is_pwm):
-    #         self.send_pwm_motor_command(motor_command.mot_1_req_rad_sec, motor_command.mot_2_req_rad_sec)
-    #     else:
-    #         # counts per loop = req rads/sec X revs/rad X counts/rev X secs/loop 
-    #         # scaler = (1 / (2*math.pi)) * self.get_parameter('encoder_cpr').value * (1 / self.get_parameter('loop_rate').value)
-    #         # mot1_ct_per_loop = motor_command.mot_1_req_rad_sec * scaler
-    #         # mot2_ct_per_loop = motor_command.mot_2_req_rad_sec * scaler
-    #         # self.send_feedback_motor_command(mot1_ct_per_loop, mot2_ct_per_loop)
-    #         pass
+
 
 def main(args=None):
     rclpy.init(args=args)
