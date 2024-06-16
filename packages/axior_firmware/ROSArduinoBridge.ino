@@ -104,7 +104,7 @@
   #include "diff_controller.h"
 
   /* Run the PID loop at 30 times per second */
-  #define PID_RATE           30     // Hz
+  #define PID_RATE           60     // Hz
 
   /* Convert the rate into an interval */
   const int PID_INTERVAL = 1000 / PID_RATE;
@@ -355,4 +355,3 @@ void loop() {
   }
 #endif
 }
-
