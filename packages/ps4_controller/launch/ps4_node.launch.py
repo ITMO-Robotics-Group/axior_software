@@ -6,14 +6,26 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='joy',
-            executable='joy_node',
-            output='screen'
+            executable='joy_node'
+            # output='screen'
         ),
         
         Node(
             package='ps4_controller',
-            executable='ps4_node',
-            output='screen'
+            executable='ps4_node'
+            # output='screen'
+        ),
+
+        Node(
+            package='serial_motor_demo',
+            executable='driver',
+            output='screen',
+            parameters=[{
+                "encoder_cpr": 3440,
+                "loop_rate": 30,
+                "serial_port": '/dev/ttyUSB0',
+                "baud_rate": 57600,
+            }]
         )
     ])
 
