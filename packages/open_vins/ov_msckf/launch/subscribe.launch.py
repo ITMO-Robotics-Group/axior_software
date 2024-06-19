@@ -89,22 +89,23 @@ def launch_setup(context):
         ],
     )
 
-    node2 = Node(
-        package="rviz2",
-        executable="rviz2",
-        condition=IfCondition(LaunchConfiguration("rviz_enable")),
-        arguments=[
-            "-d"
-            + os.path.join(
-                get_package_share_directory("ov_msckf"), "launch", "display_ros2.rviz"
-            ),
-            "--ros-args",
-            "--log-level",
-            "warn",
-            ],
-    )
+    # node2 = Node(
+    #     package="rviz2",
+    #     executable="rviz2",
+    #     condition=IfCondition(LaunchConfiguration("rviz_enable")),
+    #     arguments=[
+    #         "-d"
+    #         + os.path.join(
+    #             get_package_share_directory("ov_msckf"), "launch", "display_ros2.rviz"
+    #         ),
+    #         "--ros-args",
+    #         "--log-level",
+    #         "warn",
+    #         ],
+    # )
 
-    return [node1, node2]
+    # return [node1, node2]
+    return [node1]
 
 
 def generate_launch_description():

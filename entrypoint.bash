@@ -11,7 +11,7 @@ source /opt/ros/humble/setup.bash
 # . ~/ros2_humble/install/local_setup.bash
 
 . ~/axior_ws/install/setup.bash
-. ~/realsense_ws/install/setup.bash
+. ~/ros2_ws/install/setup.bash
 
 echo "ROS_DISTRO: $ROS_DISTRO"
 echo "ROS_ROOT: $ROS_ROOT"

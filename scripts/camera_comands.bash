@@ -9,3 +9,7 @@
 # ros2 launch foxglove_bridge foxglove_bridge_launch.xml
 
 # ros2 run aruco_localization aruco_localization
+
+# ros2 launch realsense2_camera rs_launch.py enable_color:=true enable_gyro:=true enable_accel:=true unite_imu_method:=2 enable_depth:=false
+
+# ros2 launch ov_msckf subscribe.launch.py config:=rs_d455 max_cameras:=1
