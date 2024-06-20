@@ -56,7 +56,7 @@
             <param name="topic_type" type="str" value="PoseWithCovarianceStamped" />
             <param name="output"     type="str" value="$(arg path_est)" />
         </node>
-    </group>
+    </group>   
 
     <!-- path viz of aligned gt -->
     <group if="$(arg dolivetraj)">

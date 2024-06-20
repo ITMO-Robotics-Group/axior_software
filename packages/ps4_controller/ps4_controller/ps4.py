@@ -3,6 +3,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from serial_motor_demo_msgs.msg import MotorCommand
 from sensor_msgs.msg import Joy
+from nav_msgs.msg import Odometry, Path
 
 class PS4ControllerNode(Node):
     def __init__(self):
@@ -18,13 +19,20 @@ class PS4ControllerNode(Node):
                                     '/joy',
                                     self.joy_callback,
                                     10)
-        self.subscription  # prevent unused variable warning
-
+        # self.subscription  # prevent unused variable warning
+        self.subscription = self.create_subscription(
+                                    Odometry,
+                                    '/ov_msckf/loop_extrinsic',
+                                    self.odometry_callback,
+                                    10)
     # def joy_callback(self, msg): # for Twist msg type
     #     twist = Twist()
     #     twist.linear.x = msg.axes[1]  # Left stick vertical axis
     #     twist.linear.y = msg.axes[3]  # Right stick vertical axis
     #     self.publisher_.publish(twist)
+
+    def odometry_callback(self, msg):
+        print(f' X: {msg.pose.pose.position.x}')
 
     def joy_callback(self, msg): # for Twist msg type
         commands = MotorCommand()
